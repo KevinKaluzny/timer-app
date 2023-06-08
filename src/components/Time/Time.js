@@ -1,6 +1,8 @@
+import styles from './Time.module.scss';
+
 const Time = () => {
     return (
-        <span>00:00:00.0</span>
+        <span className={styles.time}>00:00:00.0</span>
     );
 }
 
