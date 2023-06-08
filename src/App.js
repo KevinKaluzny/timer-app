@@ -1,15 +1,8 @@
-import Container from './components/Container/Container.js';
-import Time from "./components/Time/Time";
-import Button from "./components/Button/Button";
+import Timer from './components/Timer/Timer.js';
 
 const App = () => {
   return (
-    <Container>
-      <Time />
-      <Button>Start</Button>
-      <Button>Stop</Button>
-      <Button>Reset</Button>
-    </Container>
+    <Timer />
   );
 };
 

@@ -1,8 +1,9 @@
-.container {
+.timer {
     height: 90vh;
     max-width: 1200px;
     margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
