@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Timer.module.scss';
 import Time from "../Time/Time";
 import Button from "../Button/Button";
@@ -22,6 +22,11 @@ const Timer = () => {
         setTime(0);
     }
 
+    useEffect(() => {
+        return () => {
+            if(timer) clearInterval(timer);
+        };
+    }, []);
 
     return (
         <div className={styles.timer}>
