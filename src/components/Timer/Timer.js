@@ -8,8 +8,12 @@ const Timer = () => {
     const [timer, setTimer] = useState();
 
     const start = () => {
+        let startTime = Date.now();
+
         setTimer(setInterval(() => {
-            setTime(prevValue => prevValue + 1);
+            const currentTime = Date.now();
+            setTime(prevValue => prevValue + currentTime - startTime);
+            startTime = currentTime;
         }, 1));
     };
 
