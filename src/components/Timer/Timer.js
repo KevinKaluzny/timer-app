@@ -30,7 +30,7 @@ const Timer = () => {
         return () => {
             if(timer) clearInterval(timer);
         };
-    }, []);
+    });
 
     return (
         <div className={styles.timer}>
