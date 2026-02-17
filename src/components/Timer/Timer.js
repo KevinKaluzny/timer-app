@@ -19,6 +19,7 @@ const Timer = () => {
 
     const stop = () => {
         clearInterval(timer);
+        setTimer(null);
     }
 
     const reset = () => {
@@ -30,13 +31,13 @@ const Timer = () => {
         return () => {
             if(timer) clearInterval(timer);
         };
-    });
+    }, []);
 
     return (
         <div className={styles.timer}>
             <Time>{ time }</Time>
             <div>
-                <Button action={start}>Start</Button>
+                <Button action={() => {if (timer == null) {start()}}} >Start</Button>
                 <Button action={stop}>Stop</Button>
                 <Button action={reset}>Reset</Button>
             </div>
